@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Heart, Star } from 'lucide-vue-next'
+import { Info } from 'lucide-vue-next'
 import { useExportSupportDialog } from '@/features/editor/model'
 import { Button } from '@/shared/ui/button'
 import {
@@ -23,51 +23,33 @@ function onOpenChange(open: boolean) {
     :open="exportSupportDialogVisible"
     @update:open="onOpenChange"
   >
-    <DialogContent class="sm:max-w-[440px]">
+    <DialogContent class="sm:max-w-[460px]">
       <div
         class="mx-auto flex size-12 items-center justify-center rounded-full bg-primary/10 text-primary"
       >
-        <Star class="size-6 fill-current" />
+        <Info class="size-6" />
       </div>
 
       <DialogHeader class="text-center sm:text-center">
-        <DialogTitle>Your email is ready 🎉</DialogTitle>
+        <DialogTitle>MobiWave Signature Card</DialogTitle>
         <DialogDescription class="leading-6">
-          Card is free and open source. If it saves you time, support the project with a GitHub star
-          or a donation.
+          Create consistent, professional HTML email signatures for MobiWave Innovations Ltd.
+          The tool is based on MySigMail Card, an open-source email signature editor.
         </DialogDescription>
       </DialogHeader>
 
-      <div class="grid gap-2">
-        <Button
-          as="a"
-          href="https://github.com/mysigmail/card"
-          target="_blank"
-          rel="noopener noreferrer"
-          @click="closeExportSupportDialog"
-        >
-          <Star class="fill-current" />
-          Star Card on GitHub
-        </Button>
-        <Button
-          as="a"
-          variant="outline"
-          href="https://opencollective.com/mysigmail"
-          target="_blank"
-          rel="noopener noreferrer"
-          @click="closeExportSupportDialog"
-        >
-          <Heart />
-          Support development
-        </Button>
-        <Button
-          variant="ghost"
-          class="text-muted-foreground"
-          @click="closeExportSupportDialog"
-        >
-          Not now
-        </Button>
+      <div class="rounded-md border px-4 py-3 text-sm leading-6 text-muted-foreground">
+        <strong class="text-foreground">MobiWave Innovations Ltd</strong><br>
+        Kenya · Telecom + AI + Digital Infrastructure<br>
+        Designed for MobiWave team signatures across email platforms and devices.
       </div>
+
+      <Button
+        variant="outline"
+        @click="closeExportSupportDialog"
+      >
+        Continue
+      </Button>
     </DialogContent>
   </Dialog>
 </template>
