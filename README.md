@@ -49,4 +49,5 @@ This project is licensed under the **AGPL-3.0**. This means if you include this 
 [AGPL-3.0](LICENSE)
 
 Copyright (c) 2026. Mobiwave Innovations.
-Adapted from  
+
+Adapted from https://github.com/mysigmail/card
